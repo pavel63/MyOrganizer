@@ -33,4 +33,5 @@
     <string name="add_describing_of_task">Add describing of task</string>
     <string name="quota_name">Quota name</string>
     <string name="add_this_quota">Add this quota</string>
+    <string name="percent_sign">%</string>
 </resources>
