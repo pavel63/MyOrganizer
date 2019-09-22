@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.pavelwinter.myorganizer.R
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.task_list_fragment.*
 
 class TaskListFragment : BaseFragment() {
 
-    private lateinit var viewModel: TaskListViewModel
+    private lateinit var taskViewModel: TaskListViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,14 +31,26 @@ class TaskListFragment : BaseFragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
 
-
         task_list_fragment_fab ?.setOnClickListener {
             goToAnotherFragment(AddTaskFragment(),null)
         }
 
-        viewModel = ViewModelProviders.of(this).get(TaskListViewModel::class.java)
+        initViewModel()
+        taskViewModel.loadData()
+    }
 
-        setupAdapter(DataTypesGenerator.generateParentList())
+
+
+
+    private fun initViewModel(){
+        taskViewModel = ViewModelProviders.of(this).get(TaskListViewModel::class.java)
+
+        val taskListObserver = Observer<List<ParentType>> { tasks ->
+            if(tasks.isNotEmpty()) setupAdapter(tasks) else taskViewModel .loadData()
+        }
+
+        taskViewModel .tasksList .observe(this, taskListObserver)
+
     }
 
 

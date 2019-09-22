@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.pavelwinter.myorganizer.R
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.projects_fragment.*
 
 class ProjectsFragment : BaseFragment() {
 
-    private lateinit var viewModel: ProjectsViewModel
+    private lateinit var mProjectsViewModel: ProjectsViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,9 +36,23 @@ class ProjectsFragment : BaseFragment() {
             goToAnotherFragment(AddProjectFragment(),null)
         }
 
-        viewModel = ViewModelProviders.of(this).get(ProjectsViewModel::class.java)
-        setupAdapter(DataTypesGenerator.generateParentList())
+        initViewModel()
+        mProjectsViewModel .loadData()
     }
+
+
+
+    private fun initViewModel(){
+        mProjectsViewModel = ViewModelProviders.of(this).get(ProjectsViewModel::class.java)
+
+        val projectsObserver = Observer<List<ParentType>> { projects ->
+            if(projects.isNotEmpty()) setupAdapter(projects) else mProjectsViewModel .loadData()
+        }
+
+        mProjectsViewModel .projectsList .observe(this, projectsObserver)
+    }
+
+
 
 
     private fun setupAdapter(projectsFragment: List<ParentType>) {

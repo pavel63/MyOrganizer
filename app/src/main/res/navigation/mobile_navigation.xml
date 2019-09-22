@@ -9,15 +9,39 @@
         android:id="@+id/taskListFragment"
         android:name="com.pavelwinter.myorganizer.presentation.fragments.TaskListFragment"
         android:label="task_list_fragment"
-        tools:layout="@layout/task_list_fragment" />
+        tools:layout="@layout/task_list_fragment" >
+        <action
+            android:id="@+id/action_taskListFragment_to_addTaskFragment"
+            app:destination="@id/addTaskFragment" />
+    </fragment>
     <fragment
         android:id="@+id/quotaFragment"
         android:name="com.pavelwinter.myorganizer.presentation.fragments.QuotaFragment"
         android:label="quota_fragment"
-        tools:layout="@layout/quota_fragment" />
+        tools:layout="@layout/quota_fragment" >
+        <action
+            android:id="@+id/action_quotaFragment_to_addQuotaFragment"
+            app:destination="@id/addQuotaFragment" />
+    </fragment>
     <fragment
         android:id="@+id/projectsFragment"
         android:name="com.pavelwinter.myorganizer.presentation.fragments.ProjectsFragment"
         android:label="projects_fragment"
-        tools:layout="@layout/projects_fragment" />
+        tools:layout="@layout/projects_fragment" >
+        <action
+            android:id="@+id/action_projectsFragment_to_addProjectFragment"
+            app:destination="@id/addProjectFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addQuotaFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.Forms.AddQuotaFragment"
+        android:label="AddQuotaFragment" />
+    <fragment
+        android:id="@+id/addTaskFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.Forms.AddTaskFragment"
+        android:label="AddTaskFragment" />
+    <fragment
+        android:id="@+id/addProjectFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.Forms.AddProjectFragment"
+        android:label="AddProjectFragment" />
 </navigation>

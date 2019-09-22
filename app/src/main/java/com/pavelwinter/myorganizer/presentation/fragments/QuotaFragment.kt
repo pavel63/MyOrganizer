@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.pavelwinter.myorganizer.R
@@ -18,7 +19,7 @@ import kotlinx.android.synthetic.main.quota_fragment.*
 
 class QuotaFragment : BaseFragment() {
 
-    private lateinit var viewModel: QuotaViewModel
+    private lateinit var mQuotaViewModel : QuotaViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -34,19 +35,26 @@ class QuotaFragment : BaseFragment() {
             goToAnotherFragment(AddQuotaFragment(), null)
         }
 
-        viewModel = ViewModelProviders.of(this).get(QuotaViewModel::class.java)
-
-        // TODO: Use the ViewModel
-
-        setList(DataTypesGenerator.generateParentList())
+        initViewModel()
+        mQuotaViewModel .loadData()
     }
 
 
 
 
+    private fun initViewModel() {
+        mQuotaViewModel = ViewModelProviders.of(this).get(QuotaViewModel::class.java)
+        val quotaObserver = Observer<List<ParentType>>{ quotaList->
+            if(quotaList .isNotEmpty()) setAdapter(quotaList) else mQuotaViewModel.loadData()
+        }
 
-    private fun setList(quotaModelList : List<ParentType>){
+        mQuotaViewModel.quotaList .observe(this, quotaObserver)
+    }
 
+
+
+
+    private fun setAdapter(quotaModelList : List<ParentType>){
         with(quota_fragment_rv) {
             adapter = QuotaAdapter(quotaModelList)
             layoutManager = LinearLayoutManager(this@QuotaFragment.context)
