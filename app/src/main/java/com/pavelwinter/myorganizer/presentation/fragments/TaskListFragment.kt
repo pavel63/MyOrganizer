@@ -12,14 +12,11 @@ import com.pavelwinter.myorganizer.R
 import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
 import com.pavelwinter.myorganizer.data.mocks.DataTypesGenerator
 import com.pavelwinter.myorganizer.presentation.adapters.TasksAdapter
+import com.pavelwinter.myorganizer.presentation.fragments.Forms.AddTaskFragment
 import com.pavelwinter.myorganizer.presentation.view_models.TaskListViewModel
 import kotlinx.android.synthetic.main.task_list_fragment.*
 
-class TaskListFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = TaskListFragment()
-    }
+class TaskListFragment : BaseFragment() {
 
     private lateinit var viewModel: TaskListViewModel
 
@@ -32,6 +29,12 @@ class TaskListFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+
+        task_list_fragment_fab ?.setOnClickListener {
+            goToAnotherFragment(AddTaskFragment(),null)
+        }
+
         viewModel = ViewModelProviders.of(this).get(TaskListViewModel::class.java)
 
         setupAdapter(DataTypesGenerator.generateParentList())
@@ -40,7 +43,7 @@ class TaskListFragment : Fragment() {
 
 
 
-    fun setupAdapter(itemsList : List<ParentType>){
+   private fun setupAdapter(itemsList : List<ParentType>){
         with(task_list_fragment_rv){
             adapter = TasksAdapter(itemsList)
             layoutManager = LinearLayoutManager(this@TaskListFragment.activity)

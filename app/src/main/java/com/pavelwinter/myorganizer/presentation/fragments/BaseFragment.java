@@ -21,7 +21,7 @@ public class BaseFragment extends Fragment {
      * @param fragment we go to here
      * @param bundle info go with
      * */
-    public void goToAnotherFragment(BaseFragment fragment, Bundle bundle){
+    public void goToAnotherFragment(Fragment fragment, Bundle bundle){
         try {
             String fragmentTag = fragment .getClass() .getSimpleName();
             Fragment fragmentBackStack = getFragmentManager() .findFragmentByTag(fragmentTag);
