@@ -3,7 +3,7 @@
     <item
         android:id="@+id/bottom_navigation_list_m"
         android:icon="@drawable/ic_format_list_numbered_white_24dp"
-        android:title="@string/task_list" />
+        android:title="@string/tasks" />
     <item
         android:id="@+id/bottom_navigation_projects_m"
         android:icon="@drawable/ic_folder_black_24dp"

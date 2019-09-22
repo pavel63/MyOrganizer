@@ -1,30 +1,9 @@
 <resources>
-    <string name="app_name">YourOrganizer</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="agenda">Задачи дня</string>
-    <string name="projects">Проекты</string>
-    <string name="quotas">Квоты</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="title_activity_navig_drawer">NavigDrawer</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">My Organizer</string>
+    <string name="agenda">Agenda</string>
+    <string name="projects">Projects</string>
+    <string name="quotas">Quotas</string>
 
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
-    <string name="menu_tools">Tools</string>
-    <string name="menu_share">Share</string>
-    <string name="menu_send">Send</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="task_list">Task list</string>
-    <string name="projects_">Projects</string>
     <string name="you_can_add_describing">you can add describing</string>
     <string name="name">name of task</string>
     <string name="choose_time">Choose time</string>
@@ -33,5 +12,5 @@
     <string name="add_describing_of_task">Add describing of task</string>
     <string name="quota_name">Quota name</string>
     <string name="add_this_quota">Add this quota</string>
-    <string name="percent_sign">%</string>
+    <string name="tasks">Tasks</string>
 </resources>

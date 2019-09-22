@@ -34,7 +34,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
-        android:text="@string/percent_sign"
+        android:text="%"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="8dp"
         android:layout_alignParentBottom="true"

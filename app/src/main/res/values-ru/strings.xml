@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="agenda">Задачи дня</string>
+    <string name="projects">Проекты</string>
+    <string name="quotas">Квоты</string>
+    <string name="app_name">Мой органайзер</string>
+
+    <string name="you_can_add_describing">Вы можете добавить описание</string>
+    <string name="name">Название задачи</string>
+    <string name="choose_time">Выберите время</string>
+    <string name="commit">Подтвердить</string>
+    <string name="type_name_of_task">Введите имя задачи</string>
+    <string name="add_describing_of_task">Добавьте описане задачи</string>
+    <string name="quota_name">Имя квоты</string>
+    <string name="add_this_quota">Добавть эту квоту</string>
+    <string name="tasks">Задачи</string>
+</resources>
