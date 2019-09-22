@@ -40,10 +40,4 @@ class App :Application() {
         daoSession = DaoMaster(db).newSession()
     }
 
-
-
-    fun getsDaoSession () : DaoSession{
-        return daoSession
-    }
-
 }
