@@ -37,7 +37,14 @@ class App :Application() {
     private fun initGreendaoDb(){
         val helper = DaoMaster.DevOpenHelper(this, "mydatabase.db")
         val db = helper.writableDb
-        daoSession = DaoMaster(db).newSession()
+       // daoSession = DaoMaster(db).newSession()
+        AppCompanion.session = DaoMaster(db).newSession()
+    }
+
+
+
+    companion object AppCompanion{
+        var session : DaoSession ?=null
     }
 
 }

@@ -10,6 +10,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.pavelwinter.myorganizer.R
+import com.pavelwinter.myorganizer.data.db.datamanagment.TasksDataManager
+import com.pavelwinter.myorganizer.data.db.db_entities.TaskE
 import java.util.*
 
 class AddTaskFragment : Fragment() {
@@ -27,7 +29,10 @@ class AddTaskFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        callTimePicker()
+        //callTimePicker()
+
+       // val taske = TaskE(0,"dsdsd",2,2,"dfdfdf",2,2,2,2)
+      //  TasksDataManager().deleteObject(0)
     }
 
 

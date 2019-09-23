@@ -6,16 +6,25 @@ import com.pavelwinter.myorganizer.presentation.utils.App
 
 class TasksDataManager: IDbDataManager<TaskE> {
 
-     var taskEDao : TaskEDao ?= null
+    private var taskEDao : TaskEDao ?= null
 
     init {
-        taskEDao = App().daoSession.taskEDao
+        taskEDao = App.session ?.taskEDao
     }
 
     override fun addObject(taskE: TaskE) {
         taskEDao ?.insertOrReplace(taskE)
 
     }
+
+
+
+
+    override fun updateObject(parentType: TaskE) {
+
+    }
+
+
 
 
     override fun deleteObject(id: Int) {
