@@ -12,11 +12,16 @@ import android.view.ViewGroup
 import com.pavelwinter.myorganizer.R
 import com.pavelwinter.myorganizer.data.db.datamanagment.TasksDataManager
 import com.pavelwinter.myorganizer.data.db.db_entities.TaskE
+import com.pavelwinter.myorganizer.data.di.DaggerDbComponent
 import java.util.*
+import javax.inject.Inject
 
 class AddTaskFragment : Fragment() {
 
     lateinit var dateAndTime : Calendar
+
+    @Inject
+    lateinit var tasksDataManager: TasksDataManager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,13 +34,24 @@ class AddTaskFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+
+        initDagger()
+
         //callTimePicker()
 
-     //   val taske = TaskE(0,"dsdsd",2,2,"dfdfdf",2,2,2,2)
-      //  TasksDataManager().addObject(taske)
+        // val taske = TaskE(2,"dbgbbggbgbgsdsd",2,2,"dfdfdf",2,2,2,2)
+        // tasksDataManager.addObject(taske)
       //  val taskeUpd = TaskE(1,"ddfdfdfdf",1,2,"dfdfdfiuu",2,2,2,2)
       //  TasksDataManager().addObject(taskeUpd)
       //  println("=====TDL${TasksDataManager().getTaskList()?.size}")
+    }
+
+
+
+
+    private fun initDagger(){
+        DaggerDbComponent.create().inject(this)
+
     }
 
 
