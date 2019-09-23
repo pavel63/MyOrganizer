@@ -6,5 +6,5 @@ import dagger.Component
 @Component(modules = [DbModule::class])
 interface DbComponent {
 
-   fun inject(addtaskFragment : AddTaskFragment)
+   fun inject(addTaskFragment : AddTaskFragment)
 }
