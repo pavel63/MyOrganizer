@@ -31,8 +31,11 @@ class AddTaskFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         //callTimePicker()
 
-       // val taske = TaskE(0,"dsdsd",2,2,"dfdfdf",2,2,2,2)
-      //  TasksDataManager().deleteObject(0)
+     //   val taske = TaskE(0,"dsdsd",2,2,"dfdfdf",2,2,2,2)
+      //  TasksDataManager().addObject(taske)
+      //  val taskeUpd = TaskE(1,"ddfdfdfdf",1,2,"dfdfdfiuu",2,2,2,2)
+      //  TasksDataManager().addObject(taskeUpd)
+      //  println("=====TDL${TasksDataManager().getTaskList()?.size}")
     }
 
 
