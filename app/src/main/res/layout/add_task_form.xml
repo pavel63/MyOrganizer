@@ -2,25 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginLeft="@dimen/margin_16"
+    android:layout_marginRight="@dimen/margin_16"
     android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@drawable/et_frame_bgr"
+        android:minHeight="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
+            android:background="@null"
             android:id="@+id/add_task_form_title_et"
             style="@style/WidthWrap"
-            android:gravity="center_horizontal"
+            android:gravity="center_horizontal|center_vertical"
             android:hint="@string/type_name_of_task" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
+        android:layout_marginTop="@dimen/dimen_8"
+        android:background="@drawable/et_frame_bgr"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <EditText
+            android:background="@null"
             android:id="@+id/add_task_form_tdescribing_et"
             style="@style/WidthWrap"
             android:gravity="center_horizontal|center_vertical"
@@ -29,6 +37,15 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <Spinner
+        android:id="@+id/add_task_form_priority_spinner"
+        android:entries="@array/priority_list"
+        style="@style/WidthWrap"
+        android:layout_marginTop="@dimen/margin_16"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:layout_marginTop="@dimen/margin_16"
         android:id="@+id/add_task_form_projects_spinner"
         style="@style/WidthWrap"
         android:background="@android:drawable/btn_dropdown"
@@ -37,14 +54,7 @@
     <Spinner
         android:id="@+id/add_task_form_categories_spinner"
         style="@style/WidthWrap"
-        android:layout_marginTop="20dp"
-        android:background="@android:drawable/btn_dropdown"
-        android:spinnerMode="dropdown" />
-
-    <Spinner
-        android:id="@+id/add_task_form_priority_spinner"
-        style="@style/WidthWrap"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="@dimen/margin_16"
         android:background="@android:drawable/btn_dropdown"
         android:spinnerMode="dropdown" />
 

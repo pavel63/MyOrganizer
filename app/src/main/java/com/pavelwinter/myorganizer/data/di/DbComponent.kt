@@ -1,6 +1,6 @@
 package com.pavelwinter.myorganizer.data.di
 
-import com.pavelwinter.myorganizer.presentation.fragments.Forms.AddTaskFragment
+import com.pavelwinter.myorganizer.presentation.fragments.forms.AddTaskFragment
 import dagger.Component
 
 @Component(modules = [DbModule::class])

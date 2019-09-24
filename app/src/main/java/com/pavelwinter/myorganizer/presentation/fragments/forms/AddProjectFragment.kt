@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.fragments.Forms
+package com.pavelwinter.myorganizer.presentation.fragments.forms
 
 
 import android.app.DatePickerDialog

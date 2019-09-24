@@ -34,14 +34,14 @@
     </fragment>
     <fragment
         android:id="@+id/addQuotaFragment"
-        android:name="com.pavelwinter.myorganizer.presentation.fragments.Forms.AddQuotaFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.forms.AddQuotaFragment"
         android:label="AddQuotaFragment" />
     <fragment
         android:id="@+id/addTaskFragment"
-        android:name="com.pavelwinter.myorganizer.presentation.fragments.Forms.AddTaskFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.forms.AddTaskFragment"
         android:label="AddTaskFragment" />
     <fragment
         android:id="@+id/addProjectFragment"
-        android:name="com.pavelwinter.myorganizer.presentation.fragments.Forms.AddProjectFragment"
+        android:name="com.pavelwinter.myorganizer.presentation.fragments.forms.AddProjectFragment"
         android:label="AddProjectFragment" />
 </navigation>

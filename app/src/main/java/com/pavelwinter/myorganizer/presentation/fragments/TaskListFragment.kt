@@ -2,7 +2,6 @@ package com.pavelwinter.myorganizer.presentation.fragments
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +10,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 
 import com.pavelwinter.myorganizer.R
 import com.pavelwinter.myorganizer.data.db.db_entities.ParentType
-import com.pavelwinter.myorganizer.data.mocks.DataTypesGenerator
 import com.pavelwinter.myorganizer.presentation.adapters.TasksAdapter
-import com.pavelwinter.myorganizer.presentation.fragments.Forms.AddTaskFragment
+import com.pavelwinter.myorganizer.presentation.fragments.forms.AddTaskFragment
 import com.pavelwinter.myorganizer.presentation.view_models.TaskListViewModel
 import kotlinx.android.synthetic.main.task_list_fragment.*
 

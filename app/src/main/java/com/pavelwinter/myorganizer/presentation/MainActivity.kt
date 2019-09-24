@@ -1,4 +1,4 @@
-package com.pavelwinter.myorganizer.presentation.ui
+package com.pavelwinter.myorganizer.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

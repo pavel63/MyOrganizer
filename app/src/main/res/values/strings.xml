@@ -13,4 +13,11 @@
     <string name="quota_name">Quota name</string>
     <string name="add_this_quota">Add this quota</string>
     <string name="tasks">Tasks</string>
+
+
+    <string-array name="priority_list">
+        <item>High</item>
+        <item>Middle</item>
+        <item>Low</item>
+    </string-array>
 </resources>
